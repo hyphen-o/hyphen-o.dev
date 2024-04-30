@@ -1,19 +1,16 @@
-import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import { Avatar, AvatarFallback, AvatarImage } from "./components/ui/avatar";
-import { Button } from "./components/ui/button";
 
-function App() {
-	const [count, setCount] = useState(0);
-
+const App = () => {
 	return (
 		<>
-			<div>
-				<Avatar>
-					<AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+			<div className="mx-auto">
+				<Avatar className="w-40 h-40 text-center my-12">
+					<AvatarImage src="https://github.com/shadcn.png" alt="@shadcn"/>
 					<AvatarFallback>CN</AvatarFallback>
 				</Avatar>
+				<h1>Hi My name is Keigo Okamoto</h1>
 				<a href="https://vitejs.dev" target="_blank" rel="noreferrer">
 					<img src={viteLogo} className="logo" alt="Vite logo" />
 				</a>
@@ -21,18 +18,6 @@ function App() {
 					<img src={reactLogo} className="logo react" alt="React logo" />
 				</a>
 			</div>
-			<h1>Vite + React</h1>
-			<div className="card">
-				<Button onClick={() => setCount((count) => count + 1)}>
-					count is {count}
-				</Button>
-				<p>
-					Edit <code>src/App.tsx</code> and save to test HMR
-				</p>
-			</div>
-			<p className="read-the-docs">
-				Click on the Vite and React logos to learn more
-			</p>
 		</>
 	);
 }
