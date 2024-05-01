@@ -1,5 +1,5 @@
-import { CardPortfolio } from "@/components/card";
 import type { PortfolioLists } from "@/api/types";
+import { CardPortfolio } from "@/components/card";
 
 type ListPortfoliosProps = {
   portfolios: Readonly<PortfolioLists>;

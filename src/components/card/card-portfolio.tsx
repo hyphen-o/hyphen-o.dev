@@ -1,6 +1,6 @@
+import { ArrowRightIcon } from "@radix-ui/react-icons";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "../ui/card";
 import { Separator } from "../ui/separator";
-import { ArrowRightIcon } from "@radix-ui/react-icons";
 
 import type { PortfolioType } from "@/api/types";
 

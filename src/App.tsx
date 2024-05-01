@@ -1,11 +1,11 @@
+import { CardProfile } from "@/components/card";
+import { ContactList } from "@/components/constant";
+import { Container } from "@/components/container";
+import { ListContact, ListPortfolios } from "@/components/list";
 import { Avatar, AvatarFallback, AvatarImage } from "./components/ui/avatar";
 import { Separator } from "./components/ui/separator";
-import { Container } from "@/components/container";
-import { CardProfile } from "@/components/card";
-import { ListContact, ListPortfolios } from "@/components/list";
-import { ContactList } from "@/components/constant";
-import { useGetPortfolios } from "./hooks";
 import { Skeleton } from "./components/ui/skeleton";
+import { useGetPortfolios } from "./hooks";
 
 const App = () => {
   const { portfolios, isLoading } = useGetPortfolios();
