@@ -4,15 +4,18 @@ import type { PortfolioLists } from "@/api/types";
 
 export const useGetPortfolios = () => {
   const [portfolios, setPortfolios] = useState<PortfolioLists>([]);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   useEffect(() => {
+    setIsLoading(true)
     const getPortfolios = async () => {
       const res = await fetchPortfolios.get();
       setPortfolios(res.contents);
     };
-
+    
     getPortfolios();
+    setIsLoading(false)
   }, []);
 
-  return portfolios;
+  return {portfolios, isLoading}
 };
