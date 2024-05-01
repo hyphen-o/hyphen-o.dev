@@ -1,18 +1,21 @@
-import { CardPortfolio } from "@/components/card"
+import { CardPortfolio } from "@/components/card";
+
+import type { PortfolioLists } from "@/api/types";
+
+type ListContactProps = {
+  contacts: Readonly<PortfolioLists>;
+};
 
 type ListPortfoliosProps = {
-  portfolios: {
-      title: string
-      description: string
-      image_url: string
-      url: string
-  }[]
-}
+  portfolios: Readonly<PortfolioLists>;
+};
 
 export const ListPortfolios = ({ portfolios }: ListPortfoliosProps) => {
   return (
-    portfolios.map((portfolio) => {
-      <CardPortfolio portfolio={portfolio}/>
-    })
-  )
-}
+    <>
+      {portfolios.map((portfolio) => {
+        return <CardPortfolio portfolio={portfolio} key={portfolio.id} />;
+      })}
+    </>
+  );
+};

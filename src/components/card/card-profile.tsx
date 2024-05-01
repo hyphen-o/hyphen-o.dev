@@ -1,6 +1,4 @@
-import {
-	ChevronRightIcon,
-} from "@radix-ui/react-icons";
+import { ChevronRightIcon } from "@radix-ui/react-icons";
 
 export const CardProfile = () => {
   return (
@@ -14,5 +12,5 @@ export const CardProfile = () => {
         <p>I`m frontend engineer.</p>
       </h1>
     </div>
-  )
-}
+  );
+};

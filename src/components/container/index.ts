@@ -1,1 +1,1 @@
-export { Container } from "@/components/container/container"
+export { Container } from "@/components/container/container";
