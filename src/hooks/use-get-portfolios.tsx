@@ -7,15 +7,15 @@ export const useGetPortfolios = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
   useEffect(() => {
-    setIsLoading(true)
+    setIsLoading(true);
     const getPortfolios = async () => {
       const res = await fetchPortfolios.get();
       setPortfolios(res.contents);
     };
-    
+
     getPortfolios();
-    setIsLoading(false)
+    setIsLoading(false);
   }, []);
 
-  return {portfolios, isLoading}
+  return { portfolios, isLoading };
 };

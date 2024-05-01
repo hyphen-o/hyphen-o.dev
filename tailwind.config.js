@@ -1,4 +1,30 @@
 /** @type {import('tailwindcss').Config} */
+
+module.exports = {
+  theme: {
+      extend: {
+          animation: {
+              "tracking-in-expand-fwd-bottom": "tracking-in-expand-fwd-bottom 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000)   both"
+          },
+          keyframes: {
+              "tracking-in-expand-fwd-bottom": {
+                  "0%": {
+                      "letter-spacing": "-.5em",
+                      transform: "translateZ(-700px) translateY(500px)",
+                      opacity: "0"
+                  },
+                  "40%": {
+                      opacity: ".6"
+                  },
+                  to: {
+                      transform: "translateZ(0) translateY(0)",
+                      opacity: "1"
+                  }
+              }
+          }
+      }
+  }
+}
 module.exports = {
   content: [
     './pages/**/*.{ts,tsx}',
@@ -65,10 +91,24 @@ module.exports = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        "tracking-in-expand-fwd-bottom": {
+          "0%": {
+              transform: "translateZ(-700px) translateY(200px)",
+              opacity: "0"
+          },
+          "40%": {
+              opacity: ".6"
+          },
+          to: {
+              transform: "translateZ(0) translateY(0)",
+              opacity: "1"
+          }
+      }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "tracking-in-expand-fwd-bottom": "tracking-in-expand-fwd-bottom 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000)   both"
       },
     },
   },

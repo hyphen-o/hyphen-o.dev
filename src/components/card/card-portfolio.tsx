@@ -10,7 +10,7 @@ type CardPortfolioProps = {
 
 export const CardPortfolio = ({ portfolio }: CardPortfolioProps) => {
   return (
-    <Card>
+    <Card className="animate-tracking-in-expand-fwd-bottom">
       <CardHeader>
         <CardTitle>{portfolio.title}</CardTitle>
         <CardDescription>{portfolio.description}</CardDescription>
